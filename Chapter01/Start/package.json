@@ -1,0 +1,14 @@
+{
+  "name": "appointments",
+  "version": "1.0.0",
+  "description": "This is the example application for the book _Mastering Test-Driven Development for React_.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}
