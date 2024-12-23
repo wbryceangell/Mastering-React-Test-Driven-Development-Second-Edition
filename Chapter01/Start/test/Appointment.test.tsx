@@ -1,4 +1,5 @@
-import React, { act } from "react";
+import React from "react";
+import { act } from "@testing-library/react";
 import ReactDOM from "react-dom/client";
 import { beforeEach, describe, expect, it } from "vitest";
 import { Appointment, AppointmentsDayView } from "../src/Appointment";
