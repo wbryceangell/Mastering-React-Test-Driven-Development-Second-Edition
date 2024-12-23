@@ -15,12 +15,14 @@ describe("Appointment", () => {
     act(() => ReactDOM.createRoot(container).render(component));
 
   it("renders the customer's first name", () => {
-    render(<Appointment customer={{ firstName: "Ashley" }} />);
-    expect(document.body.textContent).toContain("Ashley");
+    const customer = { firstName: "Ashley" };
+    render(<Appointment customer={customer} />);
+    expect(document.body.textContent).toContain(customer.firstName);
   });
 
   it("renders another customer's first name", () => {
-    render(<Appointment customer={{ firstName: "Jordan" }} />);
-    expect(document.body.textContent).toContain("Jordan");
+    const customer = { firstName: "Jordan" };
+    render(<Appointment customer={customer} />);
+    expect(document.body.textContent).toContain(customer.firstName);
   });
 });
