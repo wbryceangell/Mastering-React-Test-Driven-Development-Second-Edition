@@ -42,4 +42,10 @@ describe("AppointmentsDayView", () => {
     render(<AppointmentsDayView />);
     expect(document.querySelector("div#appointmentsDayView")).not.toBeNull();
   });
+
+  it("renders an ol element to display appointment", () => {
+    render(<AppointmentsDayView />);
+    const listElement = document.querySelector("ol");
+    expect(listElement).not.toBeNull();
+  });
 });
