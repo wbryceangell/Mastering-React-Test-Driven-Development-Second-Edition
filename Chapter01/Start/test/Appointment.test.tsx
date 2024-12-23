@@ -39,13 +39,24 @@ describe("AppointmentsDayView", () => {
     act(() => ReactDOM.createRoot(container).render(component));
 
   it("renders a div with the right id", () => {
-    render(<AppointmentsDayView />);
+    render(<AppointmentsDayView appointments={[]} />);
     expect(document.querySelector("div#appointmentsDayView")).not.toBeNull();
   });
 
   it("renders an ol element to display appointment", () => {
-    render(<AppointmentsDayView />);
+    render(<AppointmentsDayView appointments={[]} />);
     const listElement = document.querySelector("ol");
     expect(listElement).not.toBeNull();
+  });
+
+  it("renders an li for each appointment", () => {
+    const today = new Date();
+    const appointments = [
+      { startsAt: today.setHours(12, 0) },
+      { startsAt: today.setHours(13, 0) },
+    ];
+    render(<AppointmentsDayView appointments={appointments} />);
+    const listChildren = document.querySelectorAll("ol > li");
+    expect(listChildren).toHaveLength(2);
   });
 });

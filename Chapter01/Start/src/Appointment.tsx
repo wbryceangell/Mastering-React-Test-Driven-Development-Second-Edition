@@ -1,8 +1,12 @@
 import React from "react";
 
-export const AppointmentsDayView = () => (
+export const AppointmentsDayView = ({ appointments }) => (
   <div id="appointmentsDayView">
-    <ol></ol>
+    <ol>
+      {appointments.map(() => (
+        <li></li>
+      ))}
+    </ol>
   </div>
 );
 
